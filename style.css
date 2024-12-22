@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.calculator {
+    width: 320px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.screen {
+    background-color: #fff;
+    color: #000;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.btn {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.btn.function {
+    background-color: #5b0c36b9;
+    color: rgb(20, 1, 1);
+}
+
+.btn.operator {
+    background-color: hwb(336 43% 20% / 0.497);
+    color: rgb(16, 1, 1);
+}
+
+.btn.zero {
+    grid-column: span 1;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.mode-switch, .history-toggle, .history-clear {
+    background-color: #894e5ab9;
+    color: rgb(5, 5, 5);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mode-switch:hover, .history-toggle:hover, .history-clear:hover {
+    background-color: #ff1a6330;
+}
+
+.history {
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+body.dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode .calculator {
+    background-color: #444;
+}
+
+body.dark-mode .screen {
+    background-color: #666;
+    color: #fff;
+}
+
+body.dark-mode .btn {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .btn.function {
+    background-color: #ff1a5b46;
+    color: #fff;
+}
+
+body.dark-mode .btn.operator {
+    background-color: #ff1a9045;
+    color: #fff;
+}
+
+body.dark-mode .controls {
+    background-color: #444;
+}
+
+body.dark-mode .mode-switch {
+    background-color: #ff1a98b9;
+    color: rgb(10, 9, 9);
+}
+.history-toggle, .history-clear{
+    background-color: #744c68b9;
+    color: rgb(5, 5, 5); 
+}
+
+body.dark-mode .history {
+    background-color: #3e3e3e;
+    color: #fff;
+}
